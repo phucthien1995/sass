@@ -1,0 +1,22 @@
+@mixin padding($values...) {
+    @each $var in $values {
+        padding: #{$var};
+    }
+}
+
+@mixin margin($value...) {
+    @each $var in $value {
+        margin: #{$var};
+    }
+}
+
+@mixin bg-color($value) {
+    background-color: $value;
+}
+
+@mixin media($min-width, $max-width) {
+    @media all and (min-width: $min-width) and (max-width:$max-width) {
+        @content;
+    }
+}
+
